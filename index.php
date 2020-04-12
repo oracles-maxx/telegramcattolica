@@ -1,6 +1,6 @@
 <?php
 
-echo "test test"; 
+echo "test testqqq"; 
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
 echo($chatId);
