@@ -15,6 +15,26 @@ $username = isset($message['chat']['username']) ? $message['chat']['username'] :
 $date = isset($message['date']) ? $message['date'] : null;
 $text = isset($message['text']) ? $message['text'] : null;
 
+if(strpos($text, "/start") === 0 || $text=="ciao")
+{
+	$response = "Ciao $firstname, benvenuto!";
+}
+elseif($text=="domanda 1")
+{
+	$response = "risposta 1";
+}
+elseif($text=="domanda 2")
+{
+	$response = "risposta 2";
+}
+else
+{
+	$response = "Comando non valido!";
+}
+
+
+
+
 \header('Content-Type: application/json');
 $parameters = array('chat_id' => $chatId, 'text' => $text, 'method' => 'sendMessage');
 echo \json_encode($parameters);
