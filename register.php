@@ -3,7 +3,7 @@
 // PARAMETRI DA MODIFICARE
 $WEBHOOK_URL = "https://".getenv('NAME_BOOT').".herokuapp.com//webhook.php";
 $BOT_TOKEN = getenv('BOT_TOKEN');
-echo($WEBHOOK_URL);
+// echo($WEBHOOK_URL);
 
 
 // NON APPORTARE MODIFICHE NEL CODICE SEGUENTE
