@@ -37,10 +37,10 @@ $response = '';
   			// print_r($xml->temperature['value']);
 			// echo("<br>----<br>");
   					
-			$response = "Temp. attuale del ".$xml->lastupdate['value'][0]."/n ".
-				   $xml->temperature['unit'][0].": ".$xml->temperature['value'][0]."/n ".
-				   "Temp. Max: ".$xml->temperature['max'][0]."/n ".
-				   "Temp. Min: ".$xml->temperature['min'][0]."/n ";
+			$response = "Temp. attuale del ".$xml->lastupdate['value'][0]."%0A ".
+				   $xml->temperature['unit'][0].": ".$xml->temperature['value'][0]."%0A ".
+				   "Temp. Max: ".$xml->temperature['max'][0]."%0A ".
+				   "Temp. Min: ".$xml->temperature['min'][0]."%0A ";
 		break;
 	}
 
