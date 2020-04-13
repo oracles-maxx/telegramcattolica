@@ -50,7 +50,9 @@ $response = '';
 			$sole    = "Sole Sorge:      ".$xml->sun['rise'][0].PHP_EOL.
 				   "Sole Tramonta:   ".$xml->sun['set'][0].PHP_EOL;
 			
-			$response = $ril.PHP_EOL.$sole.PHP_EOL.$up.PHP_EOL.$meteo.PHP_EOL;
+			$vento   = "Vento:      ".$xml->wind->speed['value'][0]." ".$xml->wind->speed['unit'][0].PHP_EOL;
+			
+			$response = $ril.PHP_EOL.$sole.PHP_EOL.$up.PHP_EOL.$meteo.PHP_EOL.$vento.PHP_EOL;
 		break;
 	}
 
