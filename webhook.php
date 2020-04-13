@@ -22,6 +22,10 @@ $text = strtolower($text);
 $response = '';
 
 	switch($text) {
+		case "/sleep":
+			sleep(30);
+			$response = "Ho dormito 30 secondi.";
+		break;
 		case "/start":
 			$response = "start";
 		break;
