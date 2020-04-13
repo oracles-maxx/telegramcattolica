@@ -21,6 +21,30 @@ $text = strtolower($text);
 
 $response = '';
 
+	switch($text) {
+		case "/start":
+			$response = "start";
+		break;
+		case "/tempo";
+  			$url = 'http://api.openweathermap.org/data/2.5/weather?q=cattolica,it&APPID=840c89daa77457596459758bac15457f&units=metric&lang=it_it&mode=xml';
+  			$data = file_get_contents($url);
+  			
+  			$xml = new SimpleXMLElement($data);
+			// echo("<br><br><code><pre>");
+  			
+  			// print_r($xml);
+			// echo("<br>----<br>");  			
+  			// print_r($xml->temperature['value']);
+			// echo("<br>----<br>");
+  					
+			$response = "tempo";
+			
+//			include 'par.php';
+		break;
+	}
+
+
+/*
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
 	$response = "Ciao $firstname, benvenuto!";
@@ -37,7 +61,7 @@ else
 {
 	$response = "Comando non valido!";
 }
-
+*/
 include 'par.php';
 
 
