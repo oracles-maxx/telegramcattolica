@@ -41,7 +41,7 @@ else
 include 'par.php';
 
 
-$response = "(".$chatId.")".$response;
+$response = "(".$chatId.")".$response."(".$test.")";
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
