@@ -30,13 +30,7 @@ $response = '';
   			$data = file_get_contents($url);
   			
   			$xml = new SimpleXMLElement($data);
-			// echo("<br><br><code><pre>");
-  			
-  			// print_r($xml);
-			// echo("<br>----<br>");  			
-  			// print_r($xml->temperature['value']);
-			// echo("<br>----<br>");
-  					
+ 					
 			$ril    = "Data Rilevazione:".date("d-m-Y H:s", strtotime($xml->lastupdate['value'][0])).PHP_EOL;
 				
 			$meteo   = "<b>Temp. Attuale</b>:   ".$xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
@@ -64,7 +58,7 @@ $response = $response."(".date("s").")";
 
 // $parameters = array('chat_id' => $chatId, "text" => $response);
 // $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
-$parameters = array('chat_id' => $chatId, "html" => $response, 'parse_mode' =>"HTML");
+$parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"HTML");
 $parameters["method"] = "sendMessage";
 
 header("Content-Type: application/json");
