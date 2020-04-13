@@ -47,8 +47,8 @@ $response = '';
 			$up      = "Umidita:         ".$xml->humidity['value'][0]." ".$xml->humidity['unit'][0].PHP_EOL.
 				   "Pressione:       ".$xml->pressure['value'][0]." ".$xml->pressure['unit'][0].PHP_EOL;
 				   
-			$sole    = "Sole Sorge:      ".$xml->sun['rise'][0].PHP_EOL.
-				   "Sole Tramonta:   ".$xml->sun['set'][0].PHP_EOL;
+			$sole    = "Sole Sorge:      ".$xml->city->sun['rise'][0].PHP_EOL.
+				   "Sole Tramonta:   ".$xml->city->sun['set'][0].PHP_EOL;
 			
 			$vento   = "Vento:      ".$xml->wind->speed['value'][0]." ".$xml->wind->speed['unit'][0].PHP_EOL;
 			
