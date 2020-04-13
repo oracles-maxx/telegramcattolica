@@ -37,10 +37,10 @@ $response = '';
   			// print_r($xml->temperature['value']);
 			// echo("<br>----<br>");
   					
-			$response = "Temp. attuale del ".$xml->lastupdate['value'][0]."%0A ".
-				   $xml->temperature['unit'][0].": ".$xml->temperature['value'][0]."%0A ".
-				   "Temp. Max: ".$xml->temperature['max'][0]."%0A ".
-				   "Temp. Min: ".$xml->temperature['min'][0]."%0A ";
+			$response = "Temp. attuale del ".$xml->lastupdate['value'][0].PHP_EOL." ".
+				   $xml->temperature['unit'][0].": ".$xml->temperature['value'][0].PHP_EOL." ".
+				   "Temp. Max: ".$xml->temperature['max'][0].PHP_EOL." ".
+				   "Temp. Min: ".$xml->temperature['min'][0].PHP_EOL." ";
 		break;
 	}
 
@@ -48,7 +48,7 @@ $response = '';
 include 'par.php';
 
 
-$response = $response."(".$test.")--";
+$response = $response."(".$test.")---";
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
