@@ -37,11 +37,11 @@ $response = '';
   			// print_r($xml->temperature['value']);
 			// echo("<br>----<br>");
   					
-			$temp    = "Temp. attuale il ".date("d-m-Y h:m", strtotime($xml->lastupdate['value'][0])).PHP_EOL." ".
-				   $xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
-				   "Temp. Max:      ".$xml->temperature['max'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
-				   "Temp. Min:      ".$xml->temperature['min'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
-				   "Temp percepita: ".$xml->feels_like['value'][0]." ".$xml->feels_like['unit'][0].PHP_EOL.PHP_EOL;
+			$temp    = "Data attuale ".date("d-m-Y H:m", strtotime($xml->lastupdate['value'][0])).PHP_EOL." ".
+				   "Temp. attuale "$xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
+				   "Temp. Max:    ".$xml->temperature['max'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
+				   "Temp. Min:     ".$xml->temperature['min'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
+				   "Temp. Percepita: ".$xml->feels_like['value'][0]." ".$xml->feels_like['unit'][0].PHP_EOL;
 			
 			$up      = "Umidita:        ".$xml->humidity['value'][0]." ".$xml->humidity['unit'][0].PHP_EOL.
 				   "Pressione:      ".$xml->pressure['value'][0]." ".$xml->pressure['unit'][0].PHP_EOL.PHP_EOL;
