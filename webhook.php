@@ -37,7 +37,7 @@ $response = '';
   			// print_r($xml->temperature['value']);
 			// echo("<br>----<br>");
   					
-			$ril    = "<br>Data Rilevazione<b>:".date("d-m-Y H:s", strtotime($xml->lastupdate['value'][0])).PHP_EOL;
+			$ril    = "Data Rilevazione:".date("d-m-Y H:s", strtotime($xml->lastupdate['value'][0])).PHP_EOL;
 				
 			$meteo   = "Temp. Attuale:   ".$xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
 				   "Temp. Max:       ".$xml->temperature['max'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
