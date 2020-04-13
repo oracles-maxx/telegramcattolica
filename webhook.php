@@ -37,9 +37,9 @@ $response = '';
   			// print_r($xml->temperature['value']);
 			// echo("<br>----<br>");
   					
-			$ril    = "*bold*Data Rilevazione:".date("d-m-Y H:s", strtotime($xml->lastupdate['value'][0])).PHP_EOL;
+			$ril    = "Data Rilevazione:".date("d-m-Y H:s", strtotime($xml->lastupdate['value'][0])).PHP_EOL;
 				
-			$meteo   = "Temp. Attuale:   ".$xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
+			$meteo   = "<b>Temp. Attuale</b>:   ".$xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
 				   "Temp. Max:       ".$xml->temperature['max'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
 				   "Temp. Min:       ".$xml->temperature['min'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
 				   "Temp. Percepita: ".$xml->feels_like['value'][0]." ".$xml->feels_like['unit'][0].PHP_EOL;
@@ -63,7 +63,8 @@ include 'par.php';
 $response = $response."(".$test.")-!";
 
 // $parameters = array('chat_id' => $chatId, "text" => $response);
-$parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
+// $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"MARKDOWN");
+$parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"HTML");
 $parameters["method"] = "sendMessage";
 
 header("Content-Type: application/json");
