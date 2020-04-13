@@ -37,10 +37,14 @@ $response = '';
   			// print_r($xml->temperature['value']);
 			// echo("<br>----<br>");
   					
-			$response = "Temp. attuale del ".$xml->lastupdate['value'][0].PHP_EOL." ".
-				   $xml->temperature['unit'][0].": ".$xml->temperature['value'][0].PHP_EOL." ".
-				   "Temp. Max: ".$xml->temperature['max'][0].PHP_EOL." ".
-				   "Temp. Min: ".$xml->temperature['min'][0].PHP_EOL." ";
+			$temp    = "Temp. attuale il ".date("d-m-Y h:m", strtotime($xml->lastupdate['value'][0])).PHP_EOL." ".
+				   $xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
+				   "Temp. Max: ".$xml->temperature['max'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
+				   "Temp. Min: ".$xml->temperature['min'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
+				   "Temp percepita: ".$xml->feels_like['value'][0]." ".$xml->feels_like['unit'][0].PHP_EOL.PHP_EOL;
+			
+			$umidita = "Umidita: ".$xml->humidity['value'][0]." ".$xml->humidity['unit'][0].PHP_EOL.PHP_EOL;
+			$response = $temp.$umidita;
 		break;
 	}
 
@@ -48,7 +52,7 @@ $response = '';
 include 'par.php';
 
 
-$response = $response."(".$test.")---";
+$response = $response."(".$test.")-";
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
