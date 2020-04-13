@@ -26,7 +26,7 @@ $response = '';
 			$response = "start";
 		break;
 		case "/tempo";
-  			$url = 'http://api.openweathermap.org/data/2.5/weather?q=cattolica,it&APPID=".getenv('ID_WEATHER')."&units=metric&lang=it_it&mode=xml';
+  			$url = 'http://api.openweathermap.org/data/2.5/weather?q=cattolica,it&APPID='.getenv('ID_WEATHER').'&units=metric&lang=it_it&mode=xml';
   			$data = file_get_contents($url);
   			
   			$xml = new SimpleXMLElement($data);
