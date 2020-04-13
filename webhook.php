@@ -54,7 +54,7 @@ $response = '';
 include 'par.php';
 
 
-$response = $response."(".date_timestamp_get(date_create()).")";
+$response = $response."(".date_timestamp_get(date_create()).") \ud83d\udd5c";
 
 // $parameters = array('chat_id' => $chatId, "text" => $response);
 // $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
