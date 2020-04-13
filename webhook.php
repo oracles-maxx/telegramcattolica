@@ -37,9 +37,10 @@ $response = '';
   			// print_r($xml->temperature['value']);
 			// echo("<br>----<br>");
   					
-			$response = "tempo";
+			$response = "Temp. update ".$xml->lastupdate['value'][0].
+				   "<br> Celsius:".$xml->temperature['value'][0];
 			
-//			include 'par.php';
+			include 'par.php';
 		break;
 	}
 
@@ -65,7 +66,7 @@ else
 include 'par.php';
 
 
-$response = "(".$chatId.")".$response."(".$test.")";
+$response = "(".$chatId.")".$response."(".$test.")--";
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
