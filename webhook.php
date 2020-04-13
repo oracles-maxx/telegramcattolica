@@ -60,7 +60,7 @@ $response = '';
 include 'par.php';
 
 
-$response = $response."(".date("s").")";
+$response = $response."(".date("s").")  \ud83d\udc38";
 
 // $parameters = array('chat_id' => $chatId, "text" => $response);
 // $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"MARKDOWN");
