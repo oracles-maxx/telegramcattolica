@@ -37,7 +37,7 @@ $response = '';
   			// print_r($xml->temperature['value']);
 			// echo("<br>----<br>");
   					
-			$ril    = "Data Rilevazione:".date("d-m-Y H:s", strtotime($xml->lastupdate['value'][0])).PHP_EOL;
+			$ril    = "*bold*Data Rilevazione:".date("d-m-Y H:s", strtotime($xml->lastupdate['value'][0])).PHP_EOL;
 				
 			$meteo   = "Temp. Attuale:   ".$xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
 				   "Temp. Max:       ".$xml->temperature['max'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
@@ -60,7 +60,7 @@ $response = '';
 include 'par.php';
 
 
-$response = $response."(".$test.")-";
+$response = $response."(".$test.")-!";
 
 // $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
