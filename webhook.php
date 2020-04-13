@@ -18,7 +18,6 @@ $text = isset($message['text']) ? $message['text'] : "";
 
 $text = trim($text);
 $text = strtolower($text);
-header("Content-Type: application/json");
 
 $response = '';
 
@@ -39,8 +38,13 @@ else
 	$response = "Comando non valido!";
 }
 
+include 'par.php';
+
+
 $response = "(".$chatId.")".$response;
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
+
+header("Content-Type: application/json");
 echo json_encode($parameters);
