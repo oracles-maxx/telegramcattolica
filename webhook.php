@@ -37,8 +37,8 @@ $response = '';
   			// print_r($xml->temperature['value']);
 			// echo("<br>----<br>");
   					
-			$temp    = "Data attuale ".date("d-m-Y H:s", strtotime($xml->lastupdate['value'][0])).PHP_EOL." ".
-				   "Temp. attuale "$xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
+			$temp    = "Data attuale ".date("d-m-Y H:s", strtotime($xml->lastupdate['value'][0])).PHP_EOL.
+				   "Temp. attuale ".$xml->temperature['value'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
 				   "Temp. Max:    ".$xml->temperature['max'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
 				   "Temp. Min:     ".$xml->temperature['min'][0]." ".$xml->temperature['unit'][0].PHP_EOL.
 				   "Temp. Percepita: ".$xml->feels_like['value'][0]." ".$xml->feels_like['unit'][0].PHP_EOL;
