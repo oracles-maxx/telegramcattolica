@@ -64,7 +64,7 @@ $response = $response."(".date("s").")";
 
 // $parameters = array('chat_id' => $chatId, "text" => $response);
 // $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
-$parameters = array('chat_id' => $chatId, "html_text" => $response, 'parse_mode' =>"HTML");
+$parameters = array('chat_id' => $chatId, "html" => $response, 'parse_mode' =>"HTML");
 $parameters["method"] = "sendMessage";
 
 header("Content-Type: application/json");
