@@ -63,8 +63,8 @@ include 'par.php';
 $response = $response."(".date("s").")";
 
 // $parameters = array('chat_id' => $chatId, "text" => $response);
-// $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"MARKDOWN");
-$parameters = array('chat_id' => $chatId, "html_text" => $response, 'parse_mode' =>"html");
+$parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
+//$parameters = array('chat_id' => $chatId, "html_text" => $response, 'parse_mode' =>"html");
 $parameters["method"] = "sendMessage";
 
 header("Content-Type: application/json");
