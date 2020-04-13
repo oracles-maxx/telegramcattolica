@@ -48,7 +48,7 @@ $response = '';
 				   "Pressione:       ".$xml->pressure['value'][0]." ".$xml->pressure['unit'][0].PHP_EOL;
 				   
 			$sole    = "Sole Sorge:      ".$xml->sun['rise'][0].PHP_EOL.
-				   "Sole Tramonta:   ".$xml->su['set'][0].PHP_EOL;
+				   "Sole Tramonta:   ".$xml->sun['set'][0].PHP_EOL;
 			
 			$response = $ril.PHP_EOL.$sole.PHP_EOL.$up.PHP_EOL.$meteo.PHP_EOL;
 		break;
