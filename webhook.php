@@ -62,7 +62,8 @@ include 'par.php';
 
 $response = $response."(".$test.")-";
 
-$parameters = array('chat_id' => $chatId, "text" => $response);
+// $parameters = array('chat_id' => $chatId, "text" => $response);
+$parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
 $parameters["method"] = "sendMessage";
 
 header("Content-Type: application/json");
