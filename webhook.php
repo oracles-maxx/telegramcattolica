@@ -46,9 +46,9 @@ $response = '';
 			
 			$vento   = "Vento:           ".$xml->wind->speed['value'][0]." ".$xml->wind->speed['unit'][0].PHP_EOL;
 			
-			$test	=PHP_EOL.'<span style="color:blue">some *This is Blue italic.* text</span>'.PHP_EOL;
+			$test	= '<span style="color:blue">some *This is Blue italic.* text</span>'.PHP_EOL;
 			
-			$response = $ril.PHP_EOL.$sole.PHP_EOL.$up.PHP_EOL.$meteo.PHP_EOL.$vento.$test.PHP_EOL;
+			$response = $ril.PHP_EOL.$sole.PHP_EOL.$up.PHP_EOL.$meteo.PHP_EOL.$vento.PHP_EOL.$test.PHP_EOL;
 		break;
 	}
 
@@ -56,7 +56,8 @@ $response = '';
 include 'par.php';
 
 
-$response = $response.'('.date_timestamp_get(date_create()).') <pre><code class="language-thon">pre-formatted fixed-width code block written in the Python programming language</code></pre>';
+// $response = $response.'('.date_timestamp_get(date_create()).') <pre><code class="language-thon">pre-formatted fixed-width code block written in the Python programming language</code></pre>';
+$response = $response.'('.date_timestamp_get(date_create()).')';
 
 // $parameters = array('chat_id' => $chatId, "text" => $response);
 // $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
