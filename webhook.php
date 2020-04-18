@@ -46,7 +46,9 @@ $response = '';
 			
 			$vento   = "Vento:           ".$xml->wind->speed['value'][0]." ".$xml->wind->speed['unit'][0].PHP_EOL;
 			
-			$response = $ril.PHP_EOL.$sole.PHP_EOL.$up.PHP_EOL.$meteo.PHP_EOL.$vento.PHP_EOL;
+			$test	=PHP_EOL.'<span style="color:blue">some *This is Blue italic.* text</span>'.PHP_EOL;
+			
+			$response = $ril.PHP_EOL.$sole.PHP_EOL.$up.PHP_EOL.$meteo.PHP_EOL.$vento.$test.PHP_EOL;
 		break;
 	}
 
