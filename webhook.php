@@ -1,7 +1,7 @@
 <?php
 
 
-$apiToken = "my_bot_api_token";
+$apiToken = getenv('BOT_TOKEN');
 
 $data = [
     'chat_id' => '@Comune_diCattolica',
