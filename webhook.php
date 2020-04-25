@@ -25,6 +25,18 @@ $response = '';
 		case "/start":
 			$response = "Attivo.";
 		break;
+
+		case "/debug":
+			$response = "Debug.";
+			$dump = json_encode($update, JSON_PRETTY_PRINT);
+			echo json_encode([
+        			'chat_id' => $chatId, 
+        			'text' => "```\n$dump\n```", 
+        			'method' => 'sendMessage', 
+        			'parse_mode' => 'markdown'
+    				]);
+		break;
+
 		case "/sito":
 			//$label	= "<code style=\"color:blue\">Il sito e': </code>".PHP_EOL;
 			$label	= "<code style=\"color:DodgerBlue;\">Il sito e': </code>".PHP_EOL;
