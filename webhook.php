@@ -25,10 +25,10 @@ $response = '';
 		case "/start":
 			$response = "Attivo.";
 		break;
-		case "/dati":
+		case "/sito":
 			//$label	= "<code style=\"color:blue\">Il sito e': </code>".PHP_EOL;
 			$label	= "<code style=\"color:blue\">Il sito e': </code>".PHP_EOL;
-			$sito	= "http://www.cattolica.net.".PHP_EOL;
+			$sito	= "http://www.cattolica.net".PHP_EOL;
 
 			$response = $label.PHP_EOL.$sito.PHP_EOL;
 		break;
