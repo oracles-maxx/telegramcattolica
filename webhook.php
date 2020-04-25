@@ -66,7 +66,7 @@ $response = '';
 			
 			$test	= '<span style="color:blue">some *This is Blue italic.* text</span> \ud83d\udd34'.PHP_EOL;
 			// $test	= "<code style=\"color:blue\">some *This is Blue italic.* text</code>".PHP_EOL;
-			$test   ="<a href=\"http://www.example.com/\">inline URL</a>".PHP_EOL."<a href=\"tg://user?id=123456789\">inline mention of a user</a>".PHP_EOL;
+			$test   ="\ud83d\udd34 <a href=\"http://www.example.com/\">inline URL</a>".PHP_EOL."<a href=\"tg://user?id=123456789\">inline mention of a user</a>".PHP_EOL;
 			
 			$response = $ril.PHP_EOL.$sole.PHP_EOL.$up.PHP_EOL.$meteo.PHP_EOL.$vento.PHP_EOL.$test.PHP_EOL;
 		break;
