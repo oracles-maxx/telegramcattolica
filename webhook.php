@@ -1,4 +1,18 @@
 <?php
+
+
+$apiToken = "my_bot_api_token";
+
+$data = [
+    'chat_id' => '@Comune_diCattolica',
+    'text' => 'Hello world!'
+];
+
+$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
+
+
+
+
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 
