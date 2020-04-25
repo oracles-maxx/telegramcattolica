@@ -27,7 +27,7 @@ $response = '';
 		break;
 		case "/sito":
 			//$label	= "<code style=\"color:blue\">Il sito e': </code>".PHP_EOL;
-			$label	= "<h1 style=\"color:blue;\">Il sito e': </h1>".PHP_EOL;
+			$label	= "<p style=\"color:Tomato;\">Il sito e': </p>".PHP_EOL;
 			$sito	= "http://www.cattolica.net.".PHP_EOL;
 			$response = $label.PHP_EOL.$sito.PHP_EOL;
 		break;
