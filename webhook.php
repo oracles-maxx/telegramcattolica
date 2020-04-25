@@ -25,11 +25,12 @@ $response = '';
 		case "/start":
 			$response = "Attivo.";
 		break;
-		case "/sito":
+		case "/dati":
 			//$label	= "<code style=\"color:blue\">Il sito e': </code>".PHP_EOL;
 			$label	= "<code style=\"color:blue\">Il sito e': </code>".PHP_EOL;
 			$sito	= "http://www.cattolica.net.".PHP_EOL;
-			$response = $label.PHP_EOL.$sito.PHP_EOL;
+			$email = "comunecattolica@legalmailpa.it";
+			$response = $label.PHP_EOL.$sito.PHP_EOL.$email.PHP_EOL;
 		break;
 		case "/meteo";
   			$url = 'http://api.openweathermap.org/data/2.5/weather?q=cattolica,it&APPID='.getenv('ID_WEATHER').'&units=metric&lang=it_it&mode=xml';
