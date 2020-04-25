@@ -9,10 +9,26 @@ if(!$update)
 
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
-$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-$firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : "";
-$lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name'] : "";
-$username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
+
+
+$tipochat = isset($message['chat']['type']) ? $message['chat']['type'] : "";
+switch($tipochat)
+{	
+	case "group":
+		$chatId = isset($message['from']['id']) ? $message['from']['id'] : "";
+		$firstname = isset($message['from']['first_name']) ? $message['from']['first_name'] : "";
+		$lastname = isset($message['from']['last_name']) ? $message['from']['last_name'] : "";
+		$username = isset($message['from']['username']) ? $message['from']['username'] : "";
+	break;
+	case "private":
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : "";
+		$lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name'] : "";
+		$username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
+	break;
+	default:
+	break;
+}
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
 
@@ -23,7 +39,7 @@ $response = '';
 
 	switch($text) {
 		case "/start":
-			$response = "Ciao ".$lastname.",".PHP_EOL."Scrivi /help per i comandi.".PHP_EOL;
+			$response = "Ciao ".$firstname.",".PHP_EOL."Scrivi /help per i comandi.".PHP_EOL;
 		break;
 
 		case "/debug":
