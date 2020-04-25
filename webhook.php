@@ -23,7 +23,7 @@ $response = '';
 
 	switch($text) {
 		case "/start":
-			$response = "Attivo.";
+			$response = "Ciao ".$lastname.",".PHP_EOL."Scrivi /help per i comandi.".PHP_EOL;
 		break;
 
 		case "/debug":
