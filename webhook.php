@@ -29,7 +29,7 @@ $response = '';
 			//$label	= "<code style=\"color:blue\">Il sito e': </code>".PHP_EOL;
 			$label	= "<code style=\"color:blue\">Il sito e': </code>".PHP_EOL;
 			$sito	= "http://www.cattolica.net.".PHP_EOL;
-			$email = "comunecattolica@legalmailpa.it";
+			$email = "comunecattolica@legalmailpa.it".PHP_EOL;
 			$response = $label.PHP_EOL.$sito.PHP_EOL.$email.PHP_EOL;
 		break;
 		case "/meteo";
