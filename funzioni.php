@@ -9,8 +9,8 @@
 
 function send_message_html($chatid, $message)
 {
-//  $parameters = array('chat_id' => $chatId, "text" => $message, 'parse_mode' =>"HTML");
-//  $parameters["method"] = "sendMessage";
+  $parameters = array('chat_id' => $chatId, "text" => $message, 'parse_mode' =>"HTML");
+  $parameters["method"] = "sendMessage";
   
 //  header("Content-Type: application/json");
 //  echo json_encode($parameters);
