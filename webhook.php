@@ -108,13 +108,13 @@ include 'par.php';
 // $response = $response.'('.date_timestamp_get(date_create()).') <pre><code class="language-thon">pre-formatted fixed-width code block written in the Python programming language</code></pre>';
 $response = $response.'('.date_timestamp_get(date_create()).')';
 
-send_message_html($chat_id, $response);
+// send_message_html($chat_id, $response);
 
-// $parameters = array('chat_id' => $chatId, "text" => $response);
-// $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
+// --- $parameters = array('chat_id' => $chatId, "text" => $response);
+// --- $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
 
-// $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"HTML");
-// $parameters["method"] = "sendMessage";
+ $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"HTML");
+ $parameters["method"] = "sendMessage";
 
-// header("Content-Type: application/json");
-//echo json_encode($parameters);
+ header("Content-Type: application/json");
+echo json_encode($parameters);
