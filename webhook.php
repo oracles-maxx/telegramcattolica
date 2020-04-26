@@ -1,5 +1,5 @@
 <?php
-include 'funzioni.php';
+// include 'funzioni.php';
 
 $apiToken = getenv('BOT_TOKEN');
  
