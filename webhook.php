@@ -117,6 +117,7 @@ $response = $response.'('.date_timestamp_get(date_create()).'-'.$test.'-'.calcol
 
 //  header("Content-Type: application/json");
 $parameters = send_message_html($chatId, $response);
+print_r($parameters);
 echo json_encode($parameters);
 
 
