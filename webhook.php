@@ -106,7 +106,7 @@ include 'par.php';
 
 
 // $response = $response.'('.date_timestamp_get(date_create()).') <pre><code class="language-thon">pre-formatted fixed-width code block written in the Python programming language</code></pre>';
-$response = $response.'('.date_timestamp_get(date_create()).$test.'-'')';
+$response = $response.'('.date_timestamp_get(date_create()).'-'.$test.'-'.')';
 
 // send_message_html($chatId, $response);
 
