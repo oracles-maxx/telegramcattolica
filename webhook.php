@@ -1,7 +1,7 @@
 <?php
 // include 'funzioni.php';
 
-/*
+
 $apiToken = getenv('BOT_TOKEN');
  
  $data = [
@@ -11,7 +11,7 @@ $apiToken = getenv('BOT_TOKEN');
  $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
 
 exit;
-*/
+
 
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
