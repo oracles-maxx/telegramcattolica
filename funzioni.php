@@ -8,7 +8,6 @@ function inlinetastiera($chat_id, $text)
 
 function send_message_html($chatid, $message)
 {
-  echo ("sss");
   $parameters = array('chat_id' => $chatId, "text" => $message, 'parse_mode' =>"HTML");
   $parameters["method"] = "sendMessage";
   
