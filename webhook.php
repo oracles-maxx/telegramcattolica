@@ -1,5 +1,6 @@
 <?php
 include 'funzioni.php';
+echo("sss");
 
 // $apiToken = getenv('BOT_TOKEN');
 // 
