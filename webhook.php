@@ -8,8 +8,7 @@ $apiToken = getenv('BOT_TOKEN');
      'chat_id' => getenv('NAME_BOOT'),
      'text' => 'Hello world!'
  ];
- //$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
-file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
+ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
 
 exit;
 
