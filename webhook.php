@@ -4,12 +4,12 @@ include 'funzioni.php';
 $apiToken = getenv('BOT_TOKEN');
  
  $data = [
-     'chat_id' => getenv('NAME_BOOT'),
+     'chat_id' => '@'.getenv('NAME_BOOT'),
      'text' => 'Hello world!'
  ];
  $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
 
-
+exit;
 
 
 $content = file_get_contents("php://input");
@@ -108,6 +108,9 @@ include 'par.php';
 // $response = $response.'('.date_timestamp_get(date_create()).') <pre><code class="language-thon">pre-formatted fixed-width code block written in the Python programming language</code></pre>';
 $response = $response.'('.date_timestamp_get(date_create()).'-'.$test.'-'.calcolo().')';
 
+// $parameters = send_message_html($chatId, $response);
+// print_r($parameters);
+
 
 // --- $parameters = array('chat_id' => $chatId, "text" => $response);
 // --- $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
@@ -115,10 +118,8 @@ $response = $response.'('.date_timestamp_get(date_create()).'-'.$test.'-'.calcol
 // $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"HTML");
 // $parameters["method"] = "sendMessage";
 
-//  header("Content-Type: application/json");
-$parameters = send_message_html($chatId, $response);
-print_r($parameters);
-echo json_encode($parameters);
+// header("Content-Type: application/json");
+// echo json_encode($parameters);
 
 
 ?>
