@@ -1,14 +1,13 @@
 <?php
 include 'funzioni.php';
-echo("sss");
 
-// $apiToken = getenv('BOT_TOKEN');
-// 
-// $data = [
-//     'chat_id' => '@Comune_di___Cattolica',
-//     'text' => 'Hello world!'
-// ];
-// $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
+$apiToken = getenv('BOT_TOKEN');
+ 
+ $data = [
+     'chat_id' => getenv('NAME_BOOT'),
+     'text' => 'Hello world!'
+ ];
+ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
 
 
 
