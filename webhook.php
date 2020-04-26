@@ -1,16 +1,17 @@
 <?php
 // include 'funzioni.php';
 
+/*
 $apiToken = getenv('BOT_TOKEN');
  
  $data = [
-     'chat_id' => '@'.getenv('NAME_BOOT'),
+     'chat_id' => getenv('NAME_BOOT'),
      'text' => 'Hello world!'
  ];
  $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
 
 exit;
-
+*/
 
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
@@ -115,11 +116,11 @@ $response = $response.'('.date_timestamp_get(date_create()).'-'.$test.'-'.calcol
 // --- $parameters = array('chat_id' => $chatId, "text" => $response);
 // --- $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
 
-// $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"HTML");
-// $parameters["method"] = "sendMessage";
+$parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"HTML");
+ $parameters["method"] = "sendMessage";
 
-// header("Content-Type: application/json");
-// echo json_encode($parameters);
+ header("Content-Type: application/json");
+ echo json_encode($parameters);
 
 
 ?>
