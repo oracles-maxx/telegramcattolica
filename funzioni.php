@@ -6,7 +6,7 @@ function inlinetastiera($chat_id, $text)
 }
 
 
-function send_message_html($chat_id, $message)
+function send_message_html($chatid, $message)
 {
   $parameters = array('chat_id' => $chatId, "text" => $message, 'parse_mode' =>"HTML");
   $parameters["method"] = "sendMessage";
