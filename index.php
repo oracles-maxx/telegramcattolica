@@ -1,7 +1,6 @@
 <?php
 include 'webohook.php';
-
-// echo "test testqqiee"; 
+echo "test"; 
 // $chatId = $update["message"]["chat"]["id"];
 // $message = $update["message"]["text"];
 // echo($chatId);
