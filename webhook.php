@@ -108,7 +108,7 @@ include 'par.php';
 // $response = $response.'('.date_timestamp_get(date_create()).') <pre><code class="language-thon">pre-formatted fixed-width code block written in the Python programming language</code></pre>';
 $response = $response.'('.date_timestamp_get(date_create()).'-'.$test.'-'.calcolo().')';
 
-// send_message_html($chatId, $response);
+send_message_html($chatId, $response);
 
 // --- $parameters = array('chat_id' => $chatId, "text" => $response);
 // --- $parameters = array('chat_id' => $chatId, "text" => $response, 'parse_mode' =>"Markdown");
