@@ -13,6 +13,7 @@ function send_message_html($chatid, $message)
   $parameters["method"] = "sendMessage";
   
   header("Content-Type: application/json");
+  return($parameters);
 //  echo json_encode($parameters);
 }
 
