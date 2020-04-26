@@ -1,5 +1,5 @@
 <?php
-echo "Start"; 
+echo "Start -"; 
 $apiToken = getenv('BOT_TOKEN');
  
  $data = [
@@ -7,8 +7,9 @@ $apiToken = getenv('BOT_TOKEN');
      'text' => 'Hello world!'
  ];
  $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
+print_r($response);
 
-echo "End"; 
+echo "End -"; 
 // $chatId = $update["message"]["chat"]["id"];
 // $message = $update["message"]["text"];
 // echo($chatId);
